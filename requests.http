@@ -1,0 +1,19 @@
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+  "email": "itsmeiri.7@gmail.com",
+  "password": "123456",
+  "name": "Daniel Meiri",
+  "birthday": "7 Nov 1997"
+}
+
+###
+
+POST http://localhost:3000/auth
+Content-Type: application/json
+
+{
+  "email": "itsmeiri.7@gmail.com",
+  "password": "123456"
+}

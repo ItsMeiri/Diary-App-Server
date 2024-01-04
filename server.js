@@ -26,14 +26,14 @@ mongoose.connect(
 );
 
 app.use(morgan('dev'));
-app.use(
-	cors({
-		origin: '*',
-		methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-		allowedHeaders: ['Content-Type', 'Authorization'],
-		preflightContinue: false,
-	})
-);
+// app.use(
+// 	cors({
+// 		origin: '*',
+// 		methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+// 		allowedHeaders: ['Content-Type', 'Authorization'],
+// 		preflightContinue: false,
+// 	})
+// );
 app.use(cookieParser());
 app.use(express.json());
 

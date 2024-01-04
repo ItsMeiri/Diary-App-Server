@@ -36,6 +36,10 @@ app.use(
 );
 app.use(cookieParser());
 app.use(express.json());
+
+app.use('/api/users', users);
+app.use('/api/entries', entries);
+app.use('/auth', auth);
 app.use((req, res, next) => {
 	res.setHeader('Access-Control-Allow-Origin', '*');
 	res.setHeader(
@@ -48,10 +52,6 @@ app.use((req, res, next) => {
 	);
 	next();
 });
-
-app.use('/api/users', users);
-app.use('/api/entries', entries);
-app.use('/auth', auth);
 
 app.listen(4000, () =>
 	console.log('server running on localhost://4000')

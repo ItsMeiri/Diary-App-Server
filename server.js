@@ -31,7 +31,12 @@ app.use(
 		credentials: true,
 		origin: 'https://diary-app-chi.vercel.app',
 		methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-		allowedHeaders: ['Content-Type', 'Authorization'],
+		allowedHeaders: [
+			'Content-Type',
+			'Authorization',
+			'x-auth-token',
+			'Origin',
+		],
 	})
 );
 app.use(cookieParser());

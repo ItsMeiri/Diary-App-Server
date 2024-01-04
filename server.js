@@ -31,6 +31,7 @@ app.use(
 		origin: '*',
 		methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
 		allowedHeaders: ['Content-Type', 'Authorization'],
+		preflightContinue: true,
 	})
 );
 app.use(cookieParser());

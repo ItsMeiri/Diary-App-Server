@@ -28,15 +28,9 @@ mongoose.connect(
 app.use(morgan('dev'));
 app.use(
 	cors({
-		credentials: true,
-		origin: 'https://diary-app-chi.vercel.app',
+		origin: '*',
 		methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-		allowedHeaders: [
-			'Content-Type',
-			'Authorization',
-			'x-auth-token',
-			'Origin',
-		],
+		allowedHeaders: ['Content-Type', 'Authorization'],
 	})
 );
 app.use(cookieParser());
